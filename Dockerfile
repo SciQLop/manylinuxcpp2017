@@ -9,7 +9,7 @@ RUN mkdir -p /opt/cmake \
     && wget https://github.com/Kitware/CMake/releases/download/v3.16.2/cmake-3.16.2-Linux-x86_64.sh \
     && sh cmake-3.16.2-Linux-x86_64.sh  --skip-license --prefix=/opt/cmake \
     && rm -f cmake-3.16.2-Linux-x86_64.sh \
-    && git clone https://github.com/pybind/pybind11 \
+    && git clone --branch v2.4.3 https://github.com/pybind/pybind11 \
     && /opt/python/cp38-cp38/bin/python3 -m pip install pytest \
     && mkdir build \
     && cd build \
